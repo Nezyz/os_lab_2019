@@ -1,9 +1,11 @@
-#! /bin/sh
-i=0
+#!/bin/sh
+len=0
 sum=0
-for an_arg in "$@" ; do
-  sum=$(($sum + ${an_arg}))
-  i=$(($i+1))
-done
-echo "Количество: "$i
-echo "Ср.Арифм. : "$(($sum / $i))
+while read y
+do
+sum=$(($sum+$y))
+len=$(($len+1))
+done<number.txt
+avrg=$(($sum/$len))
+expr "Кол-во аргументов $len"
+expr "Cр.арефм. $avrg"
