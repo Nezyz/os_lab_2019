@@ -1,11 +1,11 @@
 #!/bin/sh
+
 len=0
 sum=0
-while read y
+for i in $*;
 do
-sum=$(($sum+$y))
+sum=$(($sum+${i}))
 len=$(($len+1))
-done<number.txt
-avrg=$(($sum/$len))
-expr "Кол-во аргументов $len"
-expr "Cр.арефм. $avrg"
+done
+echo "Количество: "$len
+echo "Ср.Арифм.: "$(($sum/$len))
