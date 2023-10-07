@@ -1,0 +1,24 @@
+    1  pwd
+    2  cd lab2
+    3  cd src
+    4  cd swap
+    5  cc main.c swap.c -o result
+    6 ./result
+    7  cd ..
+    8  cd revert_string
+    9  cc main.c revert_string.c -o result 
+   10  ./result qwerty
+   11  gcc -c revert_string.c
+   12  ar rc librever.a revert_string.o
+   13  ranlib rever.a
+   14  ranlib librever.a
+   15  gcc -c main.c
+   16  gcc main.o -L. -lrever -o result 
+   17  ./result qwerty
+   18  gcc -fPIC -c revert_string.c 
+   18  gcc -shared -o librever_2.so revert_string.o 
+   19  gcc -c main.c
+   20  gcc main.o -L. -lrever_2 -o result_2
+   21  LD_LIBRARY_PATH=$(pwd)
+   22  export LD_LIBRARY_PATH
+   23  ./result_2 qwerty
