@@ -1,0 +1,23 @@
+    1  cd lab3
+    2  cd src
+    3  cc sequential_min_max.c -o result_1
+    4  cc find_min_max.c
+    5  cc find_min_max.c sequential_min_max.c utils.c -o result_1
+    6  ./result_1 3 9 
+    7  pwd
+    8  cc parallel_min_max.c -o result_2
+    9  cc parallel_min_max.c utils.c -o result_2
+   10  cc parallel_min_max.c utils.c find_min_max.c -o result_2
+   11  ./result_2 45 8245
+   12  ./result_2 45 8245 134
+   13  ./result_2 1 5 
+   14  ./result_2 1 5 2
+   15  make -f makefile
+   16  ./result_2 3 5 5 f
+   17  ./result_2 3 5 4 3
+   18  ./result_2 3 [5,4,3]
+   19  ./result_2 3 3
+   20  ./result_2  --seed "1" --array_size "1" --pnum "1"
+   21  make -f makefile
+   22  cc target_five.c -o result_5
+   23  ./result_5 1 2
