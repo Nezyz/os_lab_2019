@@ -1,0 +1,32 @@
+    1  cd lab6
+    2  cd src
+    3  pwd
+    4  touch makefile
+    5  make -m makefile
+    6  make -f makefile
+    7  touch findFactorial.c
+    8  touch findFactorial.h
+    9  make -f makefile
+   10  make -f makefile\\nmake -f makefile
+   11  make -f makefile
+   12  make
+   13  ./server.out 
+   14  ./server.out --port 8000 --tnum 4
+   15* cd lab6
+   16* cd src
+   17* cd lab6
+   18* cd src
+   19* ./server.out
+   20* ./server.out --port 2000 --tnum 2
+   21* ./server.out --port 20001 --tnum 2
+   22* ./server.out --port 20002 -- tnum 2
+   23* ./server.out --port 20002 --tnum 2
+   24  touch servers.txt
+   25  ./client.out --k 7 --mod 5 --servers servers.txt
+   26  git add all
+   27  git add -a
+   28  git add --A
+   29  git add --a
+   30  git status
+   31  git commit -m "Lab6"
+   32  git push
